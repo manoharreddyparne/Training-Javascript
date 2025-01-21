@@ -21,3 +21,17 @@ let z = users.forEach((user,i)=>{
     return user;  // returns an undefined
 })
 console.log(z);
+
+//Json parsing
+let userData ={
+    name:"Manohar",
+    age:21,
+    add:"HYD"
+};
+console.log(userData, typeof(userData));
+let temp =JSON.stringify(userData); // converting the userData to string format
+
+console.log(x,typeof(temp));
+
+let temp2= JSON.parse(temp);
+console.log(temp2);
