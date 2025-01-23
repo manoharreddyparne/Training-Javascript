@@ -1,3 +1,5 @@
+// const { reject } = require("async");
+
 // set interval and set time out.
 console.log(19);
 console.log(33);
@@ -44,3 +46,20 @@ p3
 .then(res=>console.log(res))
 .catch(err=>console.log(err))
 .finally(()=>console.log("final2"))
+
+
+//async and await 
+console.log("\nBelow is the async and await example")
+ let p = new Promise((resolve, reject)=>{
+    setTimeout(() => {
+        resolve("Success for the await and async ");
+    }, 3000);
+ });
+
+async function demo(){
+    console.log("start");
+    let x = await p;
+    console.log(x);
+    console.log("end");
+}
+demo();

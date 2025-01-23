@@ -9,3 +9,11 @@ function fetchUsers(){
     }).catch(err=>console.log(err))
 }
 fetchUsers();
+
+// fetching the API using async and await keyword
+
+async function fetchUsers1(){
+    let response = await fetch("https:api.github.com/users");
+    let data = await response.json();
+    console.log(data);
+}
