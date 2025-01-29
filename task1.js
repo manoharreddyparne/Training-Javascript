@@ -1,0 +1,65 @@
+emps = [{
+    empid:124,
+    empname:"emp1",
+    empcompany:"ABc",
+    empSalary:13454,
+    empAddress:{
+        Empcity:"HYD",
+        EmpArea:"Maisammaguda"
+    }
+},
+{
+    empid:125,
+    empname:"emp2",
+    empcompany:"ABD",
+    empSalary:13453,
+    empAddress:{
+        Empcity:"SEC",
+        EmpArea:"bahadurpalle"
+    }
+
+},
+{
+    empid:126,
+    empname:"emp3",
+    empcompany:"ABE",
+    empSalary:134314,
+    empAddress:{
+        Empcity:"Chennai",
+        EmpArea:"kothur"
+    }
+},
+{
+    empid:127,
+    empname:"emp4",
+    empcompany:"ABF",
+    empSalary:22341,
+    empAddress:{
+        Empcity:"Delhi",
+        EmpArea:"Agra"
+    }
+},
+{
+    empid:128,
+    empname:"emp5",
+    empcompany:"ABG",
+    empSalary:4131,
+    empAddress:{
+        Empcity:"Jangaon",
+        EmpArea:"Rgp"
+    }
+}
+];
+
+emps.map(user=>{
+    let store = document.getElementById("store");
+    // console.log(store);
+    store.innerHTML+=`
+    <tr>
+        <td>${user.empid}</td>
+        <td>${user.empname}</td>
+        <td>${user.empcompany}</td>
+        <td>${user.empSalary}</td>
+        <td>${user.empAddress.Empcity}</td>
+        <td>${user.empAddress.EmpArea}</td>`
+});
